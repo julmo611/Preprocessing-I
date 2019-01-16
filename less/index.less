@@ -49,11 +49,212 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+// Variables
+@dark-color: #313131;
+@darken-color: darken(@dark-color, 10%);
+@light-color: #fafafa;
+@blue-color: #00b7ff;
+
+
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+.title-font() {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
 }
 
+.content-font() {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+
+.box-center() {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+// General 
+
+html, body {
+	height: 100%;
+	font-size: 62.5%;
+}
+
+body {
+	background-color: darken(@dark-color, 10%);
+}
+
+
+h1 {
+	.title-font;
+	font-size: 5rem;
+	text-transform: uppercase;
+}
+
+p {
+	.content-font();
+
+}
+
+a {
+	text-decoration: none;
+	color: @blue-color;
+}
+
+.container {
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+// Style
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 5%;
+}
+
+.contact-info {
+	background-color: @dark-color;
+	padding: 2%;
+	width: 40%;
+	color: @light-color;
+	.box-center;	
+	.pict {
+		width: 100%;
+		figure {
+			margin: 0 auto;
+			background-size:cover; 
+			background-image: url(../images/julian.JPG);
+			width: 200px;
+			height: 200px;
+			border: 5px solid @darken-color;
+			border-radius: 50%;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			overflow: hidden;
+		}
+	}
+	.icons-col {
+		width: 100%;
+		padding: 2%;
+		h2 {
+			text-align: left;
+			font-size: 2rem;
+			.title-font();
+			margin-bottom: 1%;
+			border-bottom: 1px solid @light-color;
+			padding: 5%;
+		}
+
+		h3 {
+			text-align: left;
+			font-size: 1.8rem;
+			.title-font();
+			color: @light-color;
+			margin: 1% 0;
+
+		}
+
+		p {
+			text-align: left;
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+		i {
+			font-size: 2rem;
+		}
+		.box-icon {
+			width: 100%;
+			.box-center;
+			flex-wrap: wrap;
+			align-content: center;
+
+			.icon {
+				width: 30%;
+				padding: 5%;
+				text-align: right;
+			}	
+			.jul-info {
+				width: 70%;
+				padding: 5%;
+			}
+		}
+	}
+	
+	
+}
+
+.resume {
+	background-color: @light-color;
+	width: 60%;
+	padding: 2%;
+	header {
+		border-bottom: 1px solid @light-color;
+		margin-bottom: 20%; 
+		h1 {
+			text-align: center;
+			color: @blue-color;
+		}
+		h2 {
+			text-align: center;
+			font-size: 2rem;
+			.title-font();
+			color: @dark-color;
+			margin-top: 1%;
+		}
+			
+	}
+	article {
+		.resume-box {
+			background-color: #FFFFFF;
+			padding: 5%;
+			margin: 2% 0;
+			border: 1px solid #efefef;
+			border-radius: 5px;
+
+			h2 {
+			font-size: 1.8rem;
+			.title-font();
+			color: @dark-color;
+			margin-top: 1%;
+
+			}
+
+			p {
+				text-align: left;
+				font-size: 1.6rem;
+				line-height: 2rem;
+				padding: 1%;
+				
+			}
+			
+			
+			ul {
+				list-style-type: square;
+				list-style-position: outside;
+				margin: 5px;
+				li {
+					margin: 2% 0;
+					font-size: 1.6rem;
+					.content-font();
+				}
+			}
+		}
+
+	}
+	
+}
+
+footer {
+	background-color: darken(@dark-color, 30%);
+}

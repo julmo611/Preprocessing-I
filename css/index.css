@@ -1,1 +1,290 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  background-color: #181818;
+}
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: #00b7ff;
+}
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5%;
+}
+.contact-info {
+  background-color: #313131;
+  padding: 2%;
+  width: 40%;
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-info .pict {
+  width: 100%;
+}
+.contact-info .pict figure {
+  margin: 0 auto;
+  background-size: cover;
+  background-image: url(../images/julian.JPG);
+  width: 200px;
+  height: 200px;
+  border: 5px solid #181818;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  overflow: hidden;
+}
+.contact-info .icons-col {
+  width: 100%;
+  padding: 2%;
+}
+.contact-info .icons-col h2 {
+  text-align: left;
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1%;
+  border-bottom: 1px solid #fafafa;
+  padding: 5%;
+}
+.contact-info .icons-col h3 {
+  text-align: left;
+  font-size: 1.8rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #fafafa;
+  margin: 1% 0;
+}
+.contact-info .icons-col p {
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.contact-info .icons-col i {
+  font-size: 2rem;
+}
+.contact-info .icons-col .box-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.contact-info .icons-col .box-icon .icon {
+  width: 30%;
+  padding: 5%;
+  text-align: right;
+}
+.contact-info .icons-col .box-icon .jul-info {
+  width: 70%;
+  padding: 5%;
+}
+.resume {
+  background-color: #fafafa;
+  width: 60%;
+  padding: 2%;
+}
+.resume header {
+  border-bottom: 1px solid #fafafa;
+  margin-bottom: 20%;
+}
+.resume header h1 {
+  text-align: center;
+  color: #00b7ff;
+}
+.resume header h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #313131;
+  margin-top: 1%;
+}
+.resume article .resume-box {
+  background-color: #FFFFFF;
+  padding: 5%;
+  margin: 2% 0;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+}
+.resume article .resume-box h2 {
+  font-size: 1.8rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #313131;
+  margin-top: 1%;
+}
+.resume article .resume-box p {
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 1%;
+}
+.resume article .resume-box ul {
+  list-style-type: square;
+  list-style-position: outside;
+  margin: 5px;
+}
+.resume article .resume-box ul li {
+  margin: 2% 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+footer {
+  background-color: #000000;
+}
