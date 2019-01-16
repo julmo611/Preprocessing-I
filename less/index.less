@@ -106,6 +106,7 @@ p {
 a {
 	text-decoration: none;
 	color: @blue-color;
+	cursor: pointer;
 }
 
 .container {
@@ -116,6 +117,34 @@ a {
 
 // Style
 
+nav {
+	margin: 0 5% 0 auto;
+	.content-font();
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	text-align: center;
+	text-transform: uppercase;
+
+	a {
+		margin: 2% 1%;
+		padding: 5px 10px; 
+	}
+	a:hover {
+		background: lighten(@dark-color, 5%); 
+		font-weight: 700;
+	}
+	@media (max-width: 500px) {
+		flex-direction: column;
+		.box-center;
+		a {
+			padding: 2%;
+			border-bottom: 1px solid #efefef;
+		}
+	}
+}
+
 main {
 	display: flex;
 	flex-wrap: wrap;
@@ -123,11 +152,41 @@ main {
 	margin: 5%;
 }
 
+.header-mobile {
+	
+	margin: 5% 0;
+	display: none; 
+	h1 {
+		text-align: center;
+		color: @blue-color;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2rem;
+		.title-font();
+		color: @light-color;
+		margin-top: 1%;
+	}
+	@media (max-width: 500px) {
+		display: block;
+	}
+		
+}
+
 .contact-info {
-	background-color: @dark-color;
+	background-image: url(../images/backg.jpg); /* fallback for older browsers */
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%), url(../images/backg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ffffff;
+	padding: 5% 0 5% 0;
 	padding: 2%;
 	width: 40%;
 	color: @light-color;
+	@media (max-width: 500px) {
+		width: 100%;
+	}
 	.box-center;	
 	.pict {
 		width: 100%;
@@ -198,7 +257,10 @@ main {
 	background-color: @light-color;
 	width: 60%;
 	padding: 2%;
-	header {
+	@media (max-width: 500px) {
+		width: 100%;
+	}
+	.header-desk {
 		border-bottom: 1px solid @light-color;
 		margin-bottom: 20%; 
 		h1 {
@@ -211,6 +273,9 @@ main {
 			.title-font();
 			color: @dark-color;
 			margin-top: 1%;
+		}
+		@media (max-width: 500px) {
+			display: none;
 		}
 			
 	}
@@ -226,8 +291,10 @@ main {
 			font-size: 1.8rem;
 			.title-font();
 			color: @dark-color;
-			margin-top: 1%;
-
+			margin: 2% 0;
+			i {
+				margin-right: 5px; 
+			}
 			}
 
 			p {
@@ -237,7 +304,17 @@ main {
 				padding: 1%;
 				
 			}
+
+			hr {
+				border: none;
+				width: 50%;
+				border-bottom: 1px solid @dark-color;
+				margin: 5% auto;
+			}
 			
+			strong {
+				font-weight: bold;
+			}
 			
 			ul {
 				list-style-type: square;
@@ -252,9 +329,22 @@ main {
 		}
 
 	}
+
 	
 }
 
 footer {
 	background-color: darken(@dark-color, 30%);
+	text-align: center;
+	padding: 5% 2% 10%;
+	h6 {
+		.content-font();
+		color: @light-color;
+		font-size: 1.4rem;
+		text-align: center;
+		margin-bottom: 20px;
+		i {
+			margin-right: 10px;
+		}
+	}
 }
